@@ -14,7 +14,7 @@
 # limitations under the License.
 
 ## Inherit from the common tree
-include device/samsung/m30s-common/BoardConfig-common.mk
+include device/samsung/m30s-common/BoardConfigCommon.mk
 
 ## Inherit from the proprietary configuration
 include vendor/samsung/m307f/BoardConfigVendor.mk
