@@ -23,9 +23,6 @@ DEVICE_PATH := device/samsung/m307f
 
 TARGET_OTA_ASSERT_DEVICE := m307f,m30s,m30sdd
 
-## APEX image
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 ## Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/device_manifest.xml
 
