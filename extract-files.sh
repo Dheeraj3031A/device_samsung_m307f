@@ -11,8 +11,12 @@ function blob_fixup() {
         vendor/lib64/hw/android.hardware.gnss@2.1-impl.so|vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so)
             "${PATCHELF}" --remove-needed libhidltransport.so "${2}"
             ;;
-        vendor/lib*/libsec-ril.so)
-            xxd -p -c0 "${2}" | sed "s/800e40f9e10316aa820c8052e30315aa/800e40f9e10316aa820c8052080080d2/g" | xxd -r -p > "${2}".patched
+        vendor/bin/hw/rild)
+            "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
+            ;;
+        vendor/lib*/libsec-ril.so|vendor/lib64/libsec-ril-dsds.so)
+            "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
+            xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aae30314aa/600e40f9820c805224008052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
             mv "${2}".patched "${2}"
             ;;
     esac
