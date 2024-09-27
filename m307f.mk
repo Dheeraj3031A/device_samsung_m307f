@@ -31,11 +31,11 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := m307f
-PRODUCT_NAME := lineage_m307f
+PRODUCT_NAME := m307f
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M307F
 PRODUCT_MANUFACTURER := samsung
