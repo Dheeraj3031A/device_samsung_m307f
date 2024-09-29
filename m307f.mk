@@ -23,7 +23,6 @@ $(call inherit-product, device/samsung/m307f/device.mk)
 
 ## Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
