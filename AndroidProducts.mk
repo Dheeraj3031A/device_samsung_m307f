@@ -15,9 +15,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/m307f.mk
+    $(LOCAL_DIR)/m307f.mk \
+    $(LOCAL_DIR)/derp_m307f.mk
 
 COMMON_LUNCH_CHOICES := \
     m307f-eng \
     m307f-user \
-    m307f-userdebug
+    m307f-userdebug \
+    derp_m307f-eng \
+    derp_m307f-user \
+    derp_m307f-userdebug
