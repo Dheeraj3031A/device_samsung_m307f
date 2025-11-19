@@ -31,14 +31,14 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 ## Enable updating of APEXes
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := m307f
-PRODUCT_NAME := lineage_m307f
+PRODUCT_NAME := arrow_m307f
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M307F
 PRODUCT_MANUFACTURER := samsung
